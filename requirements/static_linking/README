@@ -1,0 +1,19 @@
+/*statically linking*/
+
+Compiling libraries 
+
+gcc -c 
+
+it will produce object file
+
+archive as single file 
+
+ar rcs <archivename started with lib> <*.o>
+
+create archive as single library file
+
+
+linking in running time
+
+
+gcc -static *.c  -L <locatoin of library file> -<library name without lib prefix and .a postfix>

@@ -1,0 +1,19 @@
+
+
+To create library file in dynamically
+
+gcc -shared -fPIC <files> -o <renaming with prefix lib and postfix is .so>
+
+so - stands for shared objects
+fPIC - stands for file position indepented file
+shared - for shared object file means dynamic linking
+
+To tell the OS it's going to dynamically linkable
+
+export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:<location of shared file>"
+
+
+To compile
+
+
+gcc -L < Path of libraries > < c file > -l<library name without prefix and postfix>

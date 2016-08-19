@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<center>
+
+<h2 id = "demo" style = display:centre;color:violet>GPIO STATUS</h2>
+
+<button type="button" style="width: 60px;background:lavender;visibility:hidden" disabled>XX</button>
+<button type="button" style="width: 120px;background:lightsalmon;" >3.3 V</button>
+<button type="button" style="width: 120px;background:lightsalmon;display:inline">5 V</button>
+<button type="button" style="width: 60px;background:lavender;visibility:hidden">XX</button><br><br>
+<button type="button" style="width: 60px;background:lavender;visibility:hidden" >XX</button>
+<button type="button" style="width: 120px;background:cyan;">I2C SDA</button>
+<button type="button" style = "width: 120px;background:lightsalmon;display:inline" >5 V</button>
+<button type="button" style="width: 60px;background:lavender;visibility:hidden" >XX</button><br><br>
+<button type="button" style="width: 60px;background:lavender;visibility:hidden" >XX</button>
+<button type="button" style="width: 120px;background:cyan;">I2C SCL</button>
+<button type="button" style = "width: 120px;display:inline;background:darkseagreen;">GND</button>
+<button type="button" style="width: 60px;background:lavender;visibility:hidden" >XX</button><br><br>
+<button id = C4 type="button" style="width: 60px;background:lavender;"  onclick="switc(id)">EX</button>
+<button id = 4 type="button" style="width: 120px;background:lavender;" onclick="switc(id)">GPIO 4</button>
+<button type="button" style = "width: 120px;background:cyan;display:inline">UART TXD</button>
+<button type="button" style="width: 60px;background:lavender;visibility:hidden" >XX</button><br><br>
+<button type="button" style="width: 60px;background:lavender;visibility:hidden" >XX</button>
+<button type="button" style="width: 120px;background:darkseagreen;" >GND</button>
+<button type="button" style = "width: 120px;background:cyan;display:inline" >UART RXD</button>
+<button type="button" style="width: 60px;background:lavender;visibility:hidden" >XX</button><br><br>
+<button id = C17 type="button" style="width: 60px;background:lavender;"  onclick="switc(id)">EX</button>
+<button id = 17 type="button" style="width: 120px;background:lavender;" onclick="switc(id)">GPIO 17</button>
+<button id = 18 type="button" style = "width:120px;background:lavender;display:inline" onclick="switc(id)">GPIO 18</button>
+<button id = C18 type="button" style="width: 60px;background:lavender;"  onclick="switc(id)">EX</button><br><br>
+<button id = C27 type="button" style="width: 60px;background:lavender;"  onclick="switc(id)">EX</button>
+<button id = 27 type="button" style="width: 120px;background:lavender;" onclick="switc(id)">GPIO 27</button>
+<button type="button" style = "width: 120px;background:darkseagreen;display:inline" >GND</button>
+<button type="button" style="width: 60px;background:lavender;visibility:hidden" >XX</button><br><br>
+<button id = C22 type="button" style="width: 60px;background:lavender;"  onclick="switc(id)">EX</button>
+<button id = 22 type="button" style="width: 120px;background:lavender;" onclick="switc(id)">GPIO 22</button>
+<button id = 23 type="button" style = "width: 120px;display:inline;background:lavender;" onclick="switc(id)">GPIO 23</button>
+<button id = C23 type="button" style="width: 60px;background:lavender;" onclick="switc(id)" >EX</button><br><br>
+<button type="button" style="width: 60px;background:lavender;visibility:hidden" >XX</button>
+<button type="button" style="width: 120px;background:lightsalmon;" >3.3 V</button>
+<button id = 24 type="button" style = "width: 120px;background:lavender;display:inline" onclick="switc(id)">GPIO 24</button>
+<button id = C24 type="button" style="width: 60px;background:lavender;"  onclick="switc(id)">EX</button><br><br>
+<button id = C10 type="button" style="width: 60px;background:lavender;"  onclick="switc(id)">EX</button>
+<button id = 10 type="button" style="width: 120px;background:lavender;" onclick="switc(id)">GPIO 10</button>
+<button type="button" style = "width: 120px;background:darkseagreen;display:inline" >GND</button>
+<button type="button" style="width: 60px;background:lavender;visibility:hidden" >XX</button><br><br>
+<button id = C9 type="button" style="width: 60px;background:lavender;"  onclick="switc(id)">EX</button>
+<button id = 9 type="button" style="width: 120px;background:lavender;" onclick="switc(id)">GPIO 9</button>
+<button id = 25 type="button" style = "width: 120px;background:lavender;display:inline" onclick="switc(id)">GPIO 25</button>
+<button id = C25 type="button" style="width: 60px;background:lavender;"  onclick="switc(id)">EX</button><br><br>
+<button id = C11 type="button" style="width: 60px;background:lavender;"  onclick="switc(id)">EX</button>
+<button id = 11 type="button" style="width: 120px;background:lavender;" onclick="switc(id)">GPIO 11</button>
+<button id = 8 type="button" style = "width: 120px;background:lavender;display:inline" onclick="switc(id)">GPIO 8</button>
+<button id = C8 type="button" style="width: 60px;background:lavender;"  onclick="switc(id)">EX</button><br><br>
+<button type="button" style="width: 60px;background:lavender;visibility:hidden" >XX</button>
+<button type="button" style="width: 120px;background:darkseagreen;" >GND</button>
+<button id = 7 type="button" style = "width: 120px;background:lavender;display:inline" onclick="switc(id)">GPIO 7</button>
+<button id = C7 type="button" style="width: 60px;background:lavender;"  onclick="switc(id)">EX</button><br><br>
+
+</center>
+
+
+
+
+<lable> UART TX DATA:</lable>
+<input type="text" id="write" style="width:300px;background:cyan" value="Enter string here to send">
+<input type="button" onclick="writ()" value="SEND"><br><br>
+
+<lable> UART RX DATA: </lable>
+<button id= "info" type="button" style="min-width: 300px;background:cyan;color:darkgreeen;text-align:left" disabled>WAITING FOR UPDATE</button><br><br>
+
+<script>
+
+var Var = setInterval(rea, 300);
+var myVar = setInterval(loadDoc, 200);
+
+
+function writ()
+{
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+	if (xhttp.readyState == 4 && xhttp.status == 200) {
+	}
+    };
+
+    xhttp.open("POST", "counter.api", true);
+    xhttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded;charset=UTF-8");
+    xhttp.setRequestHeader("Accept", "*/*");
+    xhttp.setRequestHeader("X-Requested-With", "XMLHttpRequest");
+    if(document.getElementById("write").value != "Enter string here to send")
+    {
+	var send = "write=" + document.getElementById("write").value;
+	xhttp.send(send);
+    }
+}
+
+function rea()
+{
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+	if (xhttp.readyState == 4 && xhttp.status == 200) {
+	    document.getElementById("info").innerHTML = xhttp.responseText.toUpperCase();
+	}
+    };
+
+    xhttp.open("POST", "counter.api", true);
+    xhttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded;charset=UTF-8");
+    xhttp.setRequestHeader("Accept", "*/*");
+    xhttp.setRequestHeader("X-Requested-With", "XMLHttpRequest");
+    xhttp.send("info=0");
+}
+
+
+
+function switc(id)
+{
+    var conf;
+    if(document.getElementById(id).innerHTML.charAt(0) == 'E' || (id.charAt(0) != 'C' && document.getElementById("C" + id).innerHTML.charAt(0) == 'E'))
+    {
+	conf = confirm("EXPORTING THIS PIN PRESS OK");
+	if(id.charAt(0) != 'C')
+	{
+	    id = "C" + id;
+	}
+	if(conf == true)
+	{
+	    id = "U" + id;
+	}
+	else
+	{
+	    id = "Y" + id;
+	}
+    }
+    else if(id.charAt(0) != 'C')
+    {
+	if(document.getElementById("C" + id).innerHTML.charAt(0) == 'I')
+	{
+	    conf = alert("THIS PIN DIRECTION IS CONFIGURED AS INPUT, SO YOU CAN'T MODYFY THE VALUE OF THE PIN");
+	}
+    }
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+	if (xhttp.readyState == 4 && xhttp.status == 200) {
+	}
+    };
+
+    xhttp.open("POST", "counter.api", true);
+    xhttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded;charset=UTF-8");
+    xhttp.setRequestHeader("Accept", "*/*");
+    xhttp.setRequestHeader("X-Requested-With", "XMLHttpRequest");
+    id = id + "=0";
+    xhttp.send(id);
+}
+
+var pins;
+function loadDoc() 
+{
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+	if (xhttp.readyState == 4 && xhttp.status == 200)
+	{
+	    var strin = xhttp.responseText.split('.');
+	    for(pins = 0; pins < (strin.length - 1);pins++)
+	    {
+		var pinvalue = strin[pins].charAt(4);
+		if(pinvalue == '0')
+		{
+		    document.getElementById(parseInt(strin[pins])).style.background = "yellow";
+		}
+		else if(pinvalue == '1')
+		{
+		    document.getElementById(parseInt(strin[pins])).style.background = "springgreen";
+		}
+		var pindirection = strin[pins].charAt(3);
+		if(pindirection == 'I')
+		{
+		    document.getElementById( "C" + parseInt(strin[pins])).innerHTML =  "IN";
+		    document.getElementById( "C" + parseInt(strin[pins])).style.background =  "lightskyblue";
+		}
+		else if(pindirection == 'O')
+		{
+		    document.getElementById( "C" + parseInt(strin[pins])).innerHTML = "OUT";
+		    document.getElementById( "C" + parseInt(strin[pins])).style.background =  "violet";
+		}
+		else if(pindirection == 'X')
+		{
+		    document.getElementById( "C" + parseInt(strin[pins])).innerHTML = "EX";
+		    document.getElementById(parseInt(strin[pins])).style.background =  "lavender";
+		}
+	    }
+	}
+    };
+    xhttp.open("POST", "counter.api", true);
+    xhttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded;charset=UTF-8");
+    xhttp.setRequestHeader("Accept", "*/*");
+    xhttp.setRequestHeader("X-Requested-With", "XMLHttpRequest");
+    xhttp.send("status=0");
+}
+</script>
+
+</body>
+</html>

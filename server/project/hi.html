@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<div style="float:left;width:50%">
+<center>
+
+<h2 id="xb" style="color:violet">XBEE</h2>
+
+</center>
+
+<p id = "info" > MESSAGE : </p>
+
+</div>
+
+
+<div style="float:left;width:50%">
+<center>
+
+<h2 id = "demo" style = display:centre;color:violet>GPIO STATUS</h2>
+
+<button type="button" style="width: 60px;background:lavender;visibility:hidden" disabled>XX</button>
+<button type="button" style="width: 120px;background:lightsalmon;" >3.3 V</button>
+<button type="button" style="width: 120px;background:lightsalmon;display:inline">5 V</button>
+<button type="button" style="width: 60px;background:lavender;visibility:hidden">XX</button><br><br>
+<button type="button" style="width: 60px;background:lavender;visibility:hidden" >XX</button>
+<button type="button" style="width: 120px;background:cyan;">I2C SDA</button>
+<button type="button" style = "width: 120px;background:lightsalmon;display:inline" >5 V</button>
+<button type="button" style="width: 60px;background:lavender;visibility:hidden" >XX</button><br><br>
+<button type="button" style="width: 60px;background:lavender;visibility:hidden" >XX</button>
+<button type="button" style="width: 120px;background:cyan;">I2C SCL</button>
+<button type="button" style = "width: 120px;display:inline;background:darkseagreen;">GND</button>
+<button type="button" style="width: 60px;background:lavender;visibility:hidden" >XX</button><br><br>
+<button id = C4 type="button" style="width: 60px;background:lavender;"  onclick="switc(id)">UN</button>
+<button id = 4 type="button" style="width: 120px;background:lavender;" onclick="switc(id)">GPIO 4</button>
+<button type="button" style = "width: 120px;background:cyan;display:inline">UART TXD</button>
+<button type="button" style="width: 60px;background:lavender;visibility:hidden" >XX</button><br><br>
+<button type="button" style="width: 60px;background:lavender;visibility:hidden" >XX</button>
+<button type="button" style="width: 120px;background:darkseagreen;" >GND</button>
+<button type="button" style = "width: 120px;background:cyan;display:inline" >UART RXD</button>
+<button type="button" style="width: 60px;background:lavender;visibility:hidden" >XX</button><br><br>
+<button id = C17 type="button" style="width: 60px;background:lavender;"  onclick="switc(id)">UN</button>
+<button id = 17 type="button" style="width: 120px;background:lavender;" onclick="switc(id)">GPIO 17</button>
+<button id = 18 type="button" style = "width:120px;background:lavender;display:inline" onclick="switc(id)">GPIO 18</button>
+<button id = C18 type="button" style="width: 60px;background:lavender;"  onclick="switc(id)">UN</button><br><br>
+<button id = C27 type="button" style="width: 60px;background:lavender;"  onclick="switc(id)">UN</button>
+<button id = 27 type="button" style="width: 120px;background:lavender;" onclick="switc(id)">GPIO 27</button>
+<button type="button" style = "width: 120px;background:darkseagreen;display:inline" >GND</button>
+<button type="button" style="width: 60px;background:lavender;visibility:hidden" >XX</button><br><br>
+<button id = C22 type="button" style="width: 60px;background:lavender;"  onclick="switc(id)">UN</button>
+<button id = 22 type="button" style="width: 120px;background:lavender;" onclick="switc(id)">GPIO 22</button>
+<button id = 23 type="button" style = "width: 120px;display:inline" onclick="switc(id)">GPIO 23</button>
+<button id = C23 type="button" style="width: 60px;background:lavender;" onclick="switc(id)" >UN</button><br><br>
+<button type="button" style="width: 60px;background:lavender;visibility:hidden" >XX</button>
+<button type="button" style="width: 120px;background:lightsalmon;" >3.3 V</button>
+<button id = 24 type="button" style = "width: 120px;background:lavender;display:inline" onclick="switc(id)">GPIO 24</button>
+<button id = C24 type="button" style="width: 60px;background:lavender;"  onclick="switc(id)">UN</button><br><br>
+<button id = C10 type="button" style="width: 60px;background:lavender;"  onclick="switc(id)">UN</button>
+<button id = 10 type="button" style="width: 120px;background:lavender;" onclick="switc(id)">GPIO 10</button>
+<button type="button" style = "width: 120px;background:darkseagreen;display:inline" >GND</button>
+<button type="button" style="width: 60px;background:lavender;visibility:hidden" >XX</button><br><br>
+<button id = C9 type="button" style="width: 60px;background:lavender;"  onclick="switc(id)">UN</button>
+<button id = 9 type="button" style="width: 120px;background:lavender;" onclick="switc(id)">GPIO 9</button>
+<button id = 25 type="button" style = "width: 120px;background:lavender;display:inline" onclick="switc(id)">GPIO 25</button>
+<button id = C25 type="button" style="width: 60px;background:lavender;"  onclick="switc(id)">UN</button><br><br>
+<button id = C11 type="button" style="width: 60px;background:lavender;"  onclick="switc(id)">UN</button>
+<button id = 11 type="button" style="width: 120px;background:lavender;" onclick="switc(id)">GPIO 11</button>
+<button id = 8 type="button" style = "width: 120px;background:lavender;display:inline" onclick="switc(id)">GPIO 8</button>
+<button id = C8 type="button" style="width: 60px;background:lavender;"  onclick="switc(id)">UN</button><br><br>
+<button type="button" style="width: 60px;background:lavender;visibility:hidden" >XX</button>
+<button type="button" style="width: 120px;background:darkseagreen;" >GND</button>
+<button id = 7 type="button" style = "width: 120px;background:lavender;display:inline" onclick="switc(id)">GPIO 7</button>
+<button id = C7 type="button" style="width: 60px;background:lavender;"  onclick="switc(id)">UN</button><br><br>
+
+</center>
+
+</div>
+<script>
+
+var Var = setInterval('switc("info")', 500);
+var myVar = setInterval(loadDoc, 300);
+
+function switc(id)
+{
+    var conf;
+    if(document.getElementById(id).innerHTML.charAt(0) == 'U')
+    {
+    	conf = confirm("THIS GPIO IS NO LONGER EXPORTED IF YOU WAN'T TO EXPORT CLICK OK")
+    	if(conf == true)
+	{
+	    id = "U" + id;
+	}
+	else
+	{
+	    id = "Y" + id;
+	}
+    }
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+	if (xhttp.readyState == 4 && xhttp.status == 200) {
+	    document.getElementById("info").innerHTML = "MESSAGE : " + xhttp.responseText;
+	}
+    };
+
+    xhttp.open("POST", "counter.api", true);
+    xhttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded;charset=UTF-8");
+    xhttp.setRequestHeader("Accept", "*/*");
+    xhttp.setRequestHeader("X-Requested-With", "XMLHttpRequest");
+    id = id + "=0";
+    xhttp.send(id);
+}
+
+var pins;
+function loadDoc() 
+{
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+	if (xhttp.readyState == 4 && xhttp.status == 200)
+	{
+	    var strin = xhttp.responseText.split('.');
+	    for(pins = 0; pins < (strin.length - 1);pins++)
+	    {
+		var pinvalue = strin[pins].charAt(4);
+		if(pinvalue == '0')
+		{
+		    document.getElementById(parseInt(strin[pins])).style.background = "yellow";
+		}
+		else if(pinvalue == '1')
+		{
+		    document.getElementById(parseInt(strin[pins])).style.background = "springgreen";
+		}
+		var pindirection = strin[pins].charAt(3);
+		if(pindirection == 'I')
+		{
+		    document.getElementById( "C" + parseInt(strin[pins])).innerHTML =  "IN";
+		    document.getElementById( "C" + parseInt(strin[pins])).style.background =  "lightskyblue";
+		}
+		else if(pindirection == 'O')
+		{
+		    document.getElementById( "C" + parseInt(strin[pins])).innerHTML = "OUT";
+		    document.getElementById( "C" + parseInt(strin[pins])).style.background =  "violet";
+		}
+		else if(pindirection == 'X')
+		{
+		    document.getElementById( "C" + parseInt(strin[pins])).innerHTML = "UN";
+		    document.getElementById(parseInt(strin[pins])).style.background =  "lavender";
+		}
+	    }
+	}
+    };
+    xhttp.open("POST", "counter.api", true);
+    xhttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded;charset=UTF-8");
+    xhttp.setRequestHeader("Accept", "*/*");
+    xhttp.setRequestHeader("X-Requested-With", "XMLHttpRequest");
+    xhttp.send("status=0");
+}
+</script>
+
+</body>
+</html>
