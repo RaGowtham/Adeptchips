@@ -1,34 +1,31 @@
 #include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
 #include <fcntl.h>
 
-int put(char *string,int flag)
+#define DEVICE_NO 3
+
+int main()
 {
-    int fd,i;
+    int fd, i = 0;
+    unsigned char buffer[] = "team";
+
     if((fd = open("/dev/ttyUSB0",O_WRONLY)) == -1)
     {
 	printf("Error\n");
+	return 0;
     }
-    for(i = 0;string[i] != '\0'; i++)
+    while(1)
     {
-	write(fd,&string[i],1);
-	usleep(600);
-    }
-    if(flag == 1)
-    {
-	char end[] = "\n\r";
-	for(i = 0; i < 2;i++)
+	char info = 0;
+	info  = (buffer[i] & 0x0F) | (DEVICE_NO << 4);
+	write(fd,&info,1);
+	usleep(900);
+	info  = (buffer[i] >> 4) | (DEVICE_NO << 4);
+	write(fd,&info,1);
+	usleep(900);
+	if(buffer[i] == 0)
 	{
-	    write(fd,&end[i],2);
-	    usleep(600);
+	    i = -1;
 	}
+	i++;
     }
-}
-int main()
-{
-    char string[100];
-    printf("Enter the string : ");
-    gets(string);
-    put(string,1);
 }
