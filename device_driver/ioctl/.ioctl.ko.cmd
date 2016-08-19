@@ -1,0 +1,1 @@
+cmd_/home/gowtham/adeptchips/device_driver/ioctl/ioctl.ko := ld -r -m elf_x86_64 -T /usr/src/linux-headers-3.13.0-93-generic/scripts/module-common.lds --build-id  -o /home/gowtham/adeptchips/device_driver/ioctl/ioctl.ko /home/gowtham/adeptchips/device_driver/ioctl/ioctl.o /home/gowtham/adeptchips/device_driver/ioctl/ioctl.mod.o

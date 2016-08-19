@@ -1,0 +1,1 @@
+cmd_/home/gowtham/adeptchips/device_driver/test/both_without.o := ld -m elf_x86_64   -r -o /home/gowtham/adeptchips/device_driver/test/both_without.o /home/gowtham/adeptchips/device_driver/test/without_init.o /home/gowtham/adeptchips/device_driver/test/without_exit.o 
