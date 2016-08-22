@@ -12,3 +12,9 @@ take it as information
 
 write.c file it is taking device information and data info split it as nibble and send it with device info in single byte
 
+
+
+added delay 1500 sec to write one char after another one
+
+
+

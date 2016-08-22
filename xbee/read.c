@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <string.h>
 #include <stdlib.h>
 #include <fcntl.h>
 
@@ -46,6 +47,7 @@ int main()
 	    else
 	    {
 		printf("%s\n",list[no].data);
+		memset(list[no].data,0,100);
 		list[no].pos = 0;	
 	    }
 	}
