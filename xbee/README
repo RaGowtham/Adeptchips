@@ -1,0 +1,14 @@
+/* Xbee Network*/
+
+
+README file refers Xbee network design
+
+read.c read the single byte in a driver and validate high nibble to check the device details \
+
+and accordingly it is puting in structre low first nibble. this process continue untill '\0' was found if it is got \
+
+take it as information
+
+
+write.c file it is taking device information and data info split it as nibble and send it with device info in single byte
+
