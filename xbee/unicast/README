@@ -1,0 +1,15 @@
+xbee unicast configuration
+
+
+in this configuration xbee connected as unicast
+
+files : coordinator.c endpoint.c
+
+
+in coordinator dh and dl value is changing along which endpoint going to be connect
+
+
+
+in endpoint simple data tx and rx with some delay
+
+
