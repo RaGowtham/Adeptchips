@@ -5,7 +5,7 @@ MODULE_LICENSE("Dual BSD/GPL\n");
 
 int count = 1;
 
-module_param(count,int,0644);
+module_param(count,int,0764);
 
 static int param_init(void)
 {

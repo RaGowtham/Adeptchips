@@ -24,7 +24,7 @@ __init int exporting_symbol_init(void)
 }
 
 
-void exporting_symbol_exit(void)
+__exit void exporting_symbol_exit(void)
 {
     printk(KERN_ALERT "%s rmsmod successfully removed\n",__FUNCTION__);
 }

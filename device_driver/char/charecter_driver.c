@@ -52,13 +52,14 @@ struct file_operations entry_for_char_driver_file = {     /* register our functi
     .write   = file_write,
     .release = file_close,
 };
+
 static int __init init_function(void)                          /*  init function when insmod will run */
 {
     printk(KERN_ALERT "%s of char driver\n",__FUNCTION__);
 
     register_chrdev(250/*Major NO*/,
     		    "simple_char_driver" /*Name of the driver*/,
-    		    &entry_for_char_driver_file /*structrefor defining file operation*/);
+    		    &entry_for_char_driver_file /*structre for defining file operation*/);
     return 0;
 }
 
