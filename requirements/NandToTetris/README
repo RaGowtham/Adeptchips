@@ -1,0 +1,30 @@
+This project it will convert jack assebly code to hack computer
+
+In this project i wrote the code it will work on linux OS and gcc installed machine
+
+In this project i used following linux system calls
+
+
+unlink
+read
+write
+open
+
+
+I used string c library functions in c
+
+
+It will resolve following lables
+
+SCREEN
+KBD
+R0 to R15
+SP
+LSL
+THIS
+THAT
+
+User can define the lable in assebly code  it will resolve automatically
+
+like (HELLO),(LOOP)
+
